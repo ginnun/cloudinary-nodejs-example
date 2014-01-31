@@ -1,0 +1,5 @@
+{@ne key="{env}" value="production" type="string"}
+  <h2>500 Error</h2>
+  <h4>{err.message}</h4>
+  <pre>{err.stack|s}</pre>
+{/ne}

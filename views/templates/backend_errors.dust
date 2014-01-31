@@ -1,0 +1,7 @@
+{?backend_errors}
+    <ul>
+        {#backend_errors}
+            <li class="error-text">{.}</li>
+        {/backend_errors}
+    </ul>
+{/backend_errors}

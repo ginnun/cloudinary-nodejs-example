@@ -1,0 +1,5 @@
+{>layout/}
+
+{<content}
+  <div>{>"errors/{status_code}" /}</div>
+{/content}

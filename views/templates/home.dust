@@ -1,0 +1,41 @@
+{>layout/}
+{<content}
+
+<div id="home" data-view='Home'>
+  <h2>Welcome Home</h2>
+  <p>Client-side form validation is skipped for the sake of testing back-end validation.</p>
+
+  <form class="cmxform" id="commentForm" method="post" action="">
+    <fieldset>
+      <legend>Please provide your name, email address (won't be published), password and picture</legend>
+      {>"templates/backend_errors" backend_errors=errors.errors /}
+      {model.cloudinary_file_tag|s}
+      {>"templates/field_error_text" field="image" error_text=errors.image /}
+      <div class="progress_bar"></div>
+      <div class="preview"></div>
+
+      <input id="cimage" name="public_image_id" type="hidden" />
+      <input id="cimage_format" name="image_format" type="hidden" />
+
+      <p>
+        <label for="cname">Name (required, at least 2 characters)</label>
+        <input id="cname" name="name" value="{model.name}"/>
+        {>"templates/field_error_text" field="name" error_text=errors.name /}
+      </p>
+      <p>
+        <label for="cemail">E-Mail (required)</label>
+        <input id="cemail" type="email" name="email" value="{model.email}"/>
+        {>"templates/field_error_text" field="email" error_text=errors.email /}
+      </p>
+      <p>
+        <label for="cpass">Password (required, at least 5 characters)</label>
+        <input id="cpassword" type="password" name="password" />
+        {>"templates/field_error_text" field="password" error_text=errors.password /}
+      </p>
+      <p>
+        <input class="submit button" type="submit" value="Submit"/>
+      </p>
+    </fieldset>
+  </form>
+</div>
+{/content}

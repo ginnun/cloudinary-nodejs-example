@@ -1,0 +1,1 @@
+{?error_text}<span class="error-text error-{field}">{error_text}</span>{/error_text}

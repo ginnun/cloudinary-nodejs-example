@@ -1,0 +1,10 @@
+<header>
+  <div>
+    <h1>Challenge</h1>
+    <nav>
+      <ul>
+          <li><a href="/" class="button">Home</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

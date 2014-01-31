@@ -1,0 +1,17 @@
+{>layout/}
+{<content}
+
+<div id="home" data-view='Home'>
+  <h2>DONE! See your info below</h2>
+      {model.cloudinary_file_view|s}
+      <p>
+        Name: <span class='name'>{model.name}</span>
+      </p>
+      <p>
+        EMail: <span class='email'>{model.email}</span>
+      </p>
+      <p>
+        Password: =))
+      </p>
+</div>
+{/content}
